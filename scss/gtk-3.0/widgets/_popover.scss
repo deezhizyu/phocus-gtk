@@ -1,10 +1,10 @@
 @use '../colors';
 
 popover {
-  background: colors.$surface-weakest;
+  background: colors.$surface-strong;
   box-shadow: 0 0 5px colors.$black-moderate;
-  border-radius: 0.5em;
-  padding: 0.5em;
+  border-radius: 0.9em;
+  padding: 0 0.44em;
 
   box {
     modelbutton {
@@ -13,7 +13,11 @@ popover {
       border-radius: 0.5em;
 
       &:hover {
-        background: colors.$white-weakest;
+        background: colors.$white-weak;
+      }
+
+      &:not(:first-child) {
+        margin-top: 5px;
       }
     }
   }

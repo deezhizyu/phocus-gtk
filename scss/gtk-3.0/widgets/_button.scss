@@ -1,6 +1,6 @@
-@use 'sass:color';
-@use '../colors';
-@use '../config';
+@use "sass:color";
+@use "../colors";
+@use "../config";
 
 button {
   transition: background-color 100ms ease-in;
@@ -8,14 +8,25 @@ button {
   padding: config.$spacing-medium;
   border-radius: config.$radius;
 
-  &:hover:not(:active) { background: colors.$white-weak; }
-  &:disabled { opacity: config.$disabled-opacity; }
+  &:hover:not(:active) {
+    background: colors.$white-weak;
+  }
+  &:disabled {
+    opacity: config.$disabled-opacity;
+  }
 
-  &:checked, &.suggested-action {
-    background: color.change(colors.$purple-normal, $alpha: config.$tint-medium);
+  &:checked,
+  &.suggested-action {
+    background: color.change(
+      colors.$purple-normal,
+      $alpha: config.$tint-medium
+    );
     color: colors.$white-strong;
     &:hover:not(:active) {
-      background: color.change(colors.$purple-light, $alpha: config.$tint-medium);
+      background: color.change(
+        colors.$purple-light,
+        $alpha: config.$tint-strong
+      );
     }
   }
 
@@ -41,7 +52,8 @@ button {
     &:hover {
       background: colors.$white-weakest;
     }
-    &:active, &:checked {
+    &:active,
+    &:checked {
       background: colors.$white-weak;
     }
   }

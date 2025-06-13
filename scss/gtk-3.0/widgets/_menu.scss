@@ -1,10 +1,15 @@
-@use '../colors';
-@use '../config';
+@use "../colors";
+@use "../config";
 
 menu {
   background: colors.$surface-weak;
+  border-radius: 0.9em;
+  padding: 0.6em;
+
   menuitem {
+    border-radius: 0.5em;
     padding: config.$spacing-medium;
+
     &:hover {
       background: colors.$white-weakest;
     }

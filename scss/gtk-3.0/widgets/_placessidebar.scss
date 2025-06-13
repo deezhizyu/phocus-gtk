@@ -3,12 +3,15 @@
 @use "../config";
 
 placessidebar {
-  background: colors.$surface-strong;
+  background: transparent;
 
   list {
     background: transparent;
+    padding: 0.2em 0.4em;
 
     row {
+      border-radius: 0.5em;
+
       &:hover {
         background: colors.$white-weakest;
       }
@@ -18,7 +21,10 @@ placessidebar {
       }
 
       &:selected {
-        background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+        background: color.change(
+          colors.$accent-primary,
+          $alpha: config.$tint-medium
+        );
       }
 
       .sidebar-icon {

@@ -1,6 +1,6 @@
-@use 'sass:color';
-@use '../colors';
-@use '../config';
+@use "sass:color";
+@use "../colors";
+@use "../config";
 
 headerbar {
   background: colors.$surface-moderate;
@@ -25,7 +25,10 @@ headerbar {
       color: colors.$yellow-normal;
       &:hover {
         color: colors.$yellow-light;
-        background: color.change(colors.$yellow-normal, $alpha: config.$tint-weak);
+        background: color.change(
+          colors.$yellow-normal,
+          $alpha: config.$tint-weak
+        );
       }
     }
 
@@ -33,7 +36,10 @@ headerbar {
       color: colors.$green-normal;
       &:hover {
         color: colors.$green-light;
-        background: color.change(colors.$green-normal, $alpha: config.$tint-weak);
+        background: color.change(
+          colors.$green-normal,
+          $alpha: config.$tint-weak
+        );
       }
     }
   }

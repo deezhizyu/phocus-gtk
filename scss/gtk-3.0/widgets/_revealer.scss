@@ -8,7 +8,7 @@ revealer {
     padding: config.$spacing-medium;
   }
 
-  @each $side in ('top', 'right', 'bottom', 'left') {
+  @each $side in ("top", "right", "bottom", "left") {
     &.#{$side} frame.app-notification border {
       margin-#{$side}: config.$spacing-medium;
     }

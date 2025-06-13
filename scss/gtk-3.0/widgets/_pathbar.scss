@@ -1,19 +1,53 @@
+@use "sass:color";
 @use "../config";
+@use "../colors";
 
 .linked.path-bar {
-    button {
-      image:not(:only-child) {
-        margin-right: config.$spacing-medium;
+  button {
+    image:not(:only-child) {
+      margin-right: config.$spacing-medium;
+    }
+
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      padding: 0.2em;
+      border-radius: 0;
+      background: colors.$white-weakest;
+
+      & > * {
+        transition: background-color 100ms ease-in;
+        padding: config.$spacing-medium;
+        border-radius: config.$radius;
       }
 
-      &:not(:first-child) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+      &:hover > * {
+        background: colors.$white-weak;
+      }
+    }
+
+    &:checked:not(:first-child):not(:last-child) {
+      & > * {
+        background: color.change(
+          colors.$purple-normal,
+          $alpha: config.$tint-medium
+        );
       }
 
-      &:not(:last-child) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+      &:hover > * {
+        background: color.change(
+          colors.$purple-light,
+          $alpha: config.$tint-strong
+        );
       }
     }
   }
+}

@@ -1,16 +1,14 @@
-@use 'sass:color';
-@use '../colors';
-@use '../config';
+@use "sass:color";
+@use "../colors";
+@use "../config";
 
 tabs {
   background: colors.$surface-strongest;
 
-  @each $class, $side in (
-    'top': 'bottom',
-    'right': 'left',
-    'bottom': 'top',
-    'left': 'right'
-  ) {
+  @each $class,
+    $side
+      in ("top": "bottom", "right": "left", "bottom": "top", "left": "right")
+  {
     .#{$class} > & {
       border-#{$side}: config.$border-size solid colors.$surface-moderate;
       tab {
@@ -25,7 +23,10 @@ tabs {
     color: colors.$white-moderate;
 
     header &:checked {
-      border-color: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+      border-color: color.change(
+        colors.$accent-primary,
+        $alpha: config.$tint-medium
+      );
       color: colors.$white-strong;
     }
 

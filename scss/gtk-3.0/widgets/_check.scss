@@ -1,11 +1,12 @@
-@use '../colors';
+@use "../colors";
 
 check {
-  -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/check.symbolic.png'));
+  -gtk-icon-source: -gtk-recolor(url("../assets/symbolic/check.symbolic.png"));
   -gtk-icon-transform: scale(0);
   color: colors.$white-strongest;
   border: 0.2em solid colors.$white-weakest;
   border-radius: 0.3em;
+  margin-left: 10px;
   padding: 0.1em;
   min-width: 0.7em;
   min-height: 0.7em;
@@ -17,7 +18,8 @@ check {
     border-color: colors.$white-weak;
   }
 
-  &:active, &:checked {
+  &:active,
+  &:checked {
     background: colors.$white-weakest;
   }
 
@@ -25,6 +27,8 @@ check {
     background: colors.$accent-primary;
     -gtk-icon-transform: scale(1);
     border-color: colors.$accent-primary;
-    &:active { background: transparent; }
+    &:active {
+      background: transparent;
+    }
   }
 }

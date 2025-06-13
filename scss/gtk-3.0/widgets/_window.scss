@@ -1,6 +1,7 @@
-@use '../colors';
+@use "../colors";
 
-window, assistant {
+window,
+assistant {
   background: colors.$surface-strongest;
   color: colors.$white-strong;
 }
