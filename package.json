@@ -1,6 +1,6 @@
 {
-  "name": "phisch",
-  "version": "0.0.1",
+  "name": "phocus",
+  "version": "1.0.0",
   "description": "GTK3 theme based on the Phocus colors.",
   "scripts": {
     "build": "sass scss:.",
