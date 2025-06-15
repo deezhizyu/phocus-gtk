@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:map";
 @use "../colors";
 
 @mixin overshoot($side, $color: colors.$surface-moderate) {
@@ -7,7 +9,8 @@
     bottom: center bottom,
     left: left center,
   );
-  $position: map-get($position-per-side, $side);
+
+  $position: map.get($position-per-side, $side);
 
   background-image: -gtk-gradient(
     radial,
@@ -15,11 +18,11 @@
     0,
     $position,
     0.6,
-    from(transparentize($color, 0.8)),
-    to(transparentize($color, 1))
+    from(color.adjust($color, $alpha: -0.8)),
+    to(color.adjust($color, $alpha: -1))
   );
 
-  background-size: map-get(
+  background-size: map.get(
     (
       top: 100% 60%,
       right: 60% 100%,

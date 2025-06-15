@@ -1,4 +1,5 @@
 @use "../colors";
+@use "../config";
 
 scrollbar {
   -gtkscrollbar-has-backward-stepper: false;

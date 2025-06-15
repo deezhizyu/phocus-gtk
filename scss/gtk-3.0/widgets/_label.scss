@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../colors";
 
 label {
@@ -8,6 +9,6 @@ label {
 
   selection {
     background: colors.$accent-primary;
-    color: lighten(colors.$white-strong, 50%);
+    color: color.adjust(colors.$white-strong, $lightness: 50%);
   }
 }
