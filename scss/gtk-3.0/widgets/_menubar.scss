@@ -1,5 +1,5 @@
-@use '../colors';
-@use '../config';
+@use "../colors";
+@use "../config";
 
 menubar {
   background: colors.$surface-strongest;
@@ -11,7 +11,8 @@ menubar {
       background: colors.$white-weakest;
     }
 
-    check, radio {
+    check,
+    radio {
       margin-right: config.$spacing-medium;
     }
   }

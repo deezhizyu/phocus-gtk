@@ -1,4 +1,5 @@
 @use "../colors";
+@use "../config";
 
 check {
   -gtk-icon-source: -gtk-recolor(url("../assets/symbolic/check.symbolic.png"));
@@ -12,7 +13,7 @@ check {
   min-height: 0.7em;
 
   // TODO: extract transitions into separate directory
-  transition: -gtk-icon-transform 200ms;
+  transition: -gtk-icon-transform config.$transition;
 
   &:hover {
     border-color: colors.$white-weak;

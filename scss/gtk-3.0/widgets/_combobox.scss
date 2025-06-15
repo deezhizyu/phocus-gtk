@@ -4,16 +4,26 @@
 
 // TODO: add right to left support (doable with negative margin on the entry)
 combobox {
+  window {
+    background: none;
+
+    decoration {
+      border-radius: config.$border-size-xl;
+
+      box-shadow: 0 0 8px colors.$black-moderate;
+    }
+  }
+
   entry {
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
     &:focus + button {
-      border: config.$border-size solid
+      border: config.$border-size-small solid
         color.change(colors.$accent-primary, $alpha: config.$tint-strong);
       border-left: 0;
-      margin-right: -#{config.$border-size};
+      margin-right: -#{config.$border-size-small};
 
       &:hover {
         background-clip: padding-box;
@@ -28,6 +38,11 @@ combobox {
   .linked button.combo {
     padding: calc(config.$spacing-medium - 0.1em);
     border-radius: config.$radius;
+
+    &:checked {
+      opacity: 0;
+      background-color: colors.$white-weak;
+    }
 
     arrow {
       min-width: 1em;

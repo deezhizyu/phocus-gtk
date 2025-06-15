@@ -1,16 +1,19 @@
 @use "sass:color";
-@use "../colors";
+@use "../colors" as colors;
 @use "../config";
 
 placessidebar {
-  background: transparent;
+  background: colors.$surface-moderate;
 
   list {
-    background: transparent;
-    padding: 0.2em 0.4em;
+    background: colors.$surface-strong;
+    border-top-left-radius: config.$border-size-large;
+
+    padding: 0.4em 0.6em;
 
     row {
       border-radius: 0.5em;
+      transition: background-color config.$transition-short;
 
       &:hover {
         background: colors.$white-weakest;
@@ -21,10 +24,14 @@ placessidebar {
       }
 
       &:selected {
-        background: color.change(
+        background-color: color.change(
           colors.$accent-primary,
           $alpha: config.$tint-medium
         );
+      }
+
+      &:not(:first-child) {
+        margin-top: 2px;
       }
 
       .sidebar-icon {

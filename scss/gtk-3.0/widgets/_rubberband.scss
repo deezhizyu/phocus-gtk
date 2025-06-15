@@ -5,6 +5,6 @@
 rubberband,
 .rubberband {
   background-color: colors.$white-weakest;
-  border: config.$border-size solid
+  border: config.$border-size-small solid
     color.change(colors.$accent-primary, $alpha: config.$tint-medium);
 }

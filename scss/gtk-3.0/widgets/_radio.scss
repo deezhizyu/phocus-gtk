@@ -1,7 +1,8 @@
-@use '../colors';
+@use "../colors";
+@use "../config";
 
 radio {
-  -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
+  -gtk-icon-source: -gtk-recolor(url("../assets/symbolic/radio.symbolic.png"));
   -gtk-icon-transform: scale(0);
   color: colors.$white-strongest;
   border: 0.2em solid colors.$white-weakest;
@@ -11,13 +12,14 @@ radio {
   min-height: 0.6em;
 
   // TODO: extract transitions into separate directory
-  transition: -gtk-icon-transform 200ms;
+  transition: -gtk-icon-transform config.$transition;
 
   &:hover {
     border-color: colors.$white-weak;
   }
 
-  &:active, &:checked {
+  &:active,
+  &:checked {
     background: colors.$white-weakest;
   }
 

@@ -10,10 +10,10 @@ tabs {
       in ("top": "bottom", "right": "left", "bottom": "top", "left": "right")
   {
     .#{$class} > & {
-      border-#{$side}: config.$border-size solid colors.$surface-moderate;
+      border-#{$side}: config.$border-size-small solid colors.$surface-moderate;
       tab {
-        border-#{$side}: config.$border-size solid transparent;
-        margin-#{$side}: -#{config.$border-size};
+        border-#{$side}: config.$border-size-small solid transparent;
+        margin-#{$side}: -#{config.$border-size-small};
       }
     }
   }

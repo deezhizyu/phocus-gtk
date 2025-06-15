@@ -1,18 +1,29 @@
-@use '../colors';
-@use '../config';
+@use "sass:color";
+@use "../colors";
+@use "../config";
 
 tooltip {
-  background: colors.$surface-weakest;
+  box {
+    border-radius: config.$border-size-large;
+    box-shadow: 0 0 8px colors.$black-moderate;
 
-  > * {
-    margin: config.$spacing-medium;
+    background: color.adjust(
+      colors.$surface-moderate,
+      $red: 7,
+      $green: 7,
+      $blue: 7
+    );
+  }
+
+  label {
+    padding: config.$spacing-medium;
   }
 
   grid {
     label {
       margin: config.$spacing-small 0;
     }
-    
+
     image {
       margin-right: config.$spacing-medium;
     }

@@ -24,7 +24,7 @@
       background: colors.$white-weakest;
 
       & > * {
-        transition: background-color 100ms ease-in;
+        transition: background-color config.$transition-short ease-in;
         padding: config.$spacing-medium;
         border-radius: config.$radius;
       }

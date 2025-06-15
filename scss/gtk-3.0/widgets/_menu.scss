@@ -2,13 +2,17 @@
 @use "../config";
 
 menu {
-  background: colors.$surface-weak;
-  border-radius: 0.9em;
   padding: 0.6em;
+  border-radius: config.$border-size-xl;
+
+  background: colors.$surface-weak;
+  box-shadow: none;
 
   menuitem {
-    border-radius: 0.5em;
+    border-radius: config.$border-size-medium;
     padding: config.$spacing-medium;
+
+    transition: background-color config.$transition-short;
 
     &:hover {
       background: colors.$white-weakest;

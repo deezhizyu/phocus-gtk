@@ -1,16 +1,19 @@
-@use 'sass:color';
-@use '../colors';
-@use '../config';
+@use "sass:color";
+@use "../colors";
+@use "../config";
 
 entry {
-  padding: calc(config.$spacing-medium - config.$border-size);
+  padding: calc(config.$spacing-medium - config.$border-size-small);
   border-radius: config.$radius;
-  border: config.$border-size solid colors.$white-weakest;
+  border: config.$border-size-small solid colors.$white-weakest;
   background: colors.$white-weakest;
   background-clip: padding-box;
 
   &:focus {
-    border-color: color.change(colors.$accent-primary, $alpha: config.$tint-strong);
+    border-color: color.change(
+      colors.$accent-primary,
+      $alpha: config.$tint-strong
+    );
   }
 
   &:disabled {
@@ -28,7 +31,10 @@ entry {
 
   selection {
     color: colors.$white-strong;
-    background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+    background: color.change(
+      colors.$accent-primary,
+      $alpha: config.$tint-medium
+    );
   }
 
   .linked.horizontal & {

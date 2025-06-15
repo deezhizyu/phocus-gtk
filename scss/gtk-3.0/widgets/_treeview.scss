@@ -14,12 +14,14 @@ treeview {
   border-left-color: colors.$white-weakest; // TODO: check if there is going to be a new way to define tree-lines
   border-top-color: colors.$white-weakest; // TODO: check if there is going to be a new way to define column-lines
 
+  padding: 4px;
+
   &:hover {
-    background: colors.$white-weakest;
+    background-color: colors.$white-weakest;
   }
 
   &:selected {
-    background: color.change(
+    background-color: color.change(
       colors.$accent-primary,
       $alpha: config.$tint-medium
     );
@@ -29,18 +31,20 @@ treeview {
   header {
     button {
       padding: config.$spacing-medium;
-      background: colors.$surface-strong;
-      border-radius: 0;
-      color: colors.$white-moderate;
+      background: colors.$white-weakest;
+      color: colors.$white-strong;
+      margin: 4px;
 
       &:hover:not(:active) {
-        color: colors.$white-strong;
-        background: colors.$surface-strong;
+        background: colors.$white-weak;
+      }
+
+      &:not(:first-child) {
+        margin-left: 0;
       }
 
       &:not(:last-child) {
-        // TODO: check if there is a way to thicken threeview borders (other than this one)
-        border-right: 1px solid colors.$white-weakest;
+        margin-right: 4px;
       }
     }
   }

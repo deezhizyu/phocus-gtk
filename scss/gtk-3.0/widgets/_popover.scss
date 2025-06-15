@@ -1,23 +1,26 @@
-@use '../colors';
+@use "../colors";
+@use "../config";
 
 popover {
   background: colors.$surface-strong;
-  box-shadow: 0 0 5px colors.$black-moderate;
-  border-radius: 0.9em;
-  padding: 0 0.44em;
+  box-shadow: 0 0 8px colors.$black-moderate;
+  border-radius: config.$border-size-large;
 
   box {
+    margin: 0 -0.1em;
+
     modelbutton {
       padding: 0.4em 1em;
-      margin: 0 -0.5em;
-      border-radius: 0.5em;
+      border-radius: config.$border-size-medium;
+
+      transition: background-color config.$transition-short;
 
       &:hover {
         background: colors.$white-weak;
       }
 
       &:not(:first-child) {
-        margin-top: 5px;
+        margin-top: 4px;
       }
     }
   }

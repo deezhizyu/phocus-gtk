@@ -1,7 +1,8 @@
 @use "../colors";
 @use "../config";
 
-dialog, messagedialog {
+dialog,
+messagedialog {
   background: colors.$surface-strong;
 
   .dialog-action-box {
@@ -11,7 +12,8 @@ dialog, messagedialog {
     margin-top: 0;
   }
 
-  fontchooser, colorchooser {
+  fontchooser,
+  colorchooser {
     padding: config.$spacing-medium;
   }
 
@@ -21,10 +23,23 @@ dialog, messagedialog {
     }
 
     #pathbarbox {
-      padding: config.$spacing-small;
       background: colors.$surface-moderate;
+
+      box {
+        & > button {
+          padding: 0 12px;
+        }
+      }
+
+      & > * {
+        padding: config.$spacing-small;
+        background: colors.$surface-strong;
+
+        border-top-right-radius: config.$border-size-large;
+        border-bottom: 1px solid colors.$white-weak;
+      }
     }
-  
+
     treeview {
       background: colors.$surface-strongest;
     }

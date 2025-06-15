@@ -1,7 +1,8 @@
-@use '../colors';
-@use '../config';
+@use "../colors";
+@use "../config";
 
-toolbar, .toolbar {
+toolbar,
+.toolbar {
   background: colors.$surface-strong;
   padding: config.$spacing-medium;
 
