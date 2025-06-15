@@ -1,13 +1,17 @@
-@use 'sass:color';
-@use '../colors';
-@use '../config';
+@use "sass:color";
+@use "../colors";
+@use "../config";
 
 window.nautilus-window {
   // those are the items inside the nautilus canvas
   .nautilus-canvas-item {
     border-radius: config.$radius;
-    &:selected, &:active {
-      background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+    &:selected,
+    &:active {
+      background: color.change(
+        colors.$accent-primary,
+        $alpha: config.$tint-medium
+      );
     }
   }
 
@@ -27,7 +31,7 @@ window.nautilus-window {
 
   .nautilus-path-bar {
     background: colors.$white-weakest;
-      border-radius: config.$radius;
+    border-radius: config.$radius;
 
     > button {
       background: transparent;

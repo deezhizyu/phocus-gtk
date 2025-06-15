@@ -28,6 +28,7 @@
     ),
     $side
   );
+
   background-repeat: no-repeat;
   background-position: $position;
 }
@@ -36,12 +37,15 @@ overshoot {
   &.top {
     @include overshoot(top);
   }
+
   &.bottom {
     @include overshoot(bottom);
   }
+
   &.left {
     @include overshoot(left);
   }
+
   &.right {
     @include overshoot(right);
   }

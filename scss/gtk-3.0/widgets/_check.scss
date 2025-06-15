@@ -5,7 +5,7 @@ check {
   -gtk-icon-source: -gtk-recolor(url("../assets/symbolic/check.symbolic.png"));
   -gtk-icon-transform: scale(0);
   color: colors.$white-strongest;
-  border: 0.2em solid colors.$white-weakest;
+  border: config.$border-size-small solid colors.$white-weakest;
   border-radius: 0.3em;
   margin-left: 10px;
   padding: 0.1em;

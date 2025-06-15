@@ -15,7 +15,7 @@ expander {
       &:checked {
         -gtk-icon-source: -gtk-icontheme("go-down-symbolic");
         color: colors.$white-strong;
-        
+
         & + label {
           color: colors.$white-strong;
         }

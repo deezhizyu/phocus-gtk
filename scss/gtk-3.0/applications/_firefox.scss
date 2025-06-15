@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use '../colors';
+@use "sass:color";
+@use "../colors";
 
 #MozillaGtkWidget {
   // by default firefox mixes -moz-dialog 85& with pure white with in srgb space and uses that as the background
@@ -7,7 +7,7 @@
   // see: https://searchfox.org/mozilla-central/source/toolkit/themes/shared/global-shared.css#46
   background: color.adjust(colors.$surface-weak, $lightness: - 15%);
   color: colors.$white-strong;
-  
+
   // bar that contains inactive tabs
   // TODO: find out if the gtk headerbar (the one with decorations) can be themed as well
   menubar {

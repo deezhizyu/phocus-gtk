@@ -24,10 +24,16 @@
 
   .nemo-window-pane {
     :selected {
-      background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+      background: color.change(
+        colors.$accent-primary,
+        $alpha: config.$tint-medium
+      );
     }
     :active {
-      background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+      background: color.change(
+        colors.$accent-primary,
+        $alpha: config.$tint-medium
+      );
     }
   }
 }

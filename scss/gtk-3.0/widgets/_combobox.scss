@@ -55,16 +55,19 @@ combobox {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
     &:not(:last-child) button {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
   }
+
   .linked.vertical & {
     &:not(:first-child) button {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
+
     &:not(:last-child) button {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;

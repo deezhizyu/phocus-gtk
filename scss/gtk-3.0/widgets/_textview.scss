@@ -15,6 +15,7 @@ textview {
       colors.$accent-primary,
       $alpha: config.$tint-medium
     );
+
     color: colors.$white-strongest;
   }
 }

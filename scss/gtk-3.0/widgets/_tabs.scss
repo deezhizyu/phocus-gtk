@@ -11,6 +11,7 @@ tabs {
   {
     .#{$class} > & {
       border-#{$side}: config.$border-size-small solid colors.$surface-moderate;
+
       tab {
         border-#{$side}: config.$border-size-small solid transparent;
         margin-#{$side}: -#{config.$border-size-small};

@@ -9,13 +9,14 @@ spinbutton {
 
   &:focus {
     button {
-      &:hover {
-        background-clip: padding-box;
-      }
       border-color: color.change(
         colors.$purple-normal,
         $alpha: config.$tint-strong
       );
+
+      &:hover {
+        background-clip: padding-box;
+      }
     }
   }
 
@@ -66,6 +67,7 @@ spinbutton {
       :nth-child(3) {
         border-top-left-radius: 0;
       }
+
       :nth-child(5) {
         border-bottom-left-radius: 0;
       }
@@ -75,6 +77,7 @@ spinbutton {
       :nth-child(3) {
         border-top-right-radius: 0;
       }
+
       :nth-child(5) {
         border-bottom-right-radius: 0;
       }
@@ -86,6 +89,7 @@ spinbutton {
       :nth-child(3) {
         border-top-left-radius: 0;
       }
+
       :nth-child(5) {
         border-top-right-radius: 0;
       }
@@ -95,6 +99,7 @@ spinbutton {
       :nth-child(3) {
         border-bottom-left-radius: 0;
       }
+
       :nth-child(5) {
         border-bottom-right-radius: 0;
       }

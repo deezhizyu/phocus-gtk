@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../colors" as colors;
+@use "../colors";
 @use "../config";
 
 placessidebar {
@@ -12,7 +12,7 @@ placessidebar {
     padding: 0.4em 0.6em;
 
     row {
-      border-radius: 0.5em;
+      border-radius: config.$radius;
       transition: background-color config.$transition-short;
 
       &:hover {

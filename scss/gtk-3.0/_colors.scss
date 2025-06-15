@@ -62,5 +62,6 @@ $pink-light: $base0F;
 $accent-primary: $base03;
 $accent-secondary: $base03;
 
-// TODO: is there a better way to do this? this is for example used in gnome-calculator for the result top-border
-@define-color borders #{"" +$surface-strong};
+:root {
+  --borders: #{"" + $surface-strong};
+}

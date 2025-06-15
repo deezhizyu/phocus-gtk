@@ -19,7 +19,7 @@
     }
 
     &:not(:first-child):not(:last-child) {
-      padding: 0.2em;
+      padding: config.$border-size-small;
       border-radius: 0;
       background: colors.$white-weakest;
 

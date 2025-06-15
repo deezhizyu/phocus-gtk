@@ -7,7 +7,7 @@ headerbar {
   padding: config.$spacing-medium;
 
   button.titlebutton {
-    padding: calc(config.$spacing-medium + 0.2em);
+    padding: calc(config.$spacing-medium + config.$border-size-small);
   }
 
   button.titlebutton:not(.appmenu) {

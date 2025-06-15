@@ -31,7 +31,7 @@ button {
   }
 
   &.image-button:not(.text-button) {
-    padding: calc(config.$spacing-medium + 0.2em);
+    padding: calc(config.$spacing-medium + config.$border-size-small);
   }
 
   &.destructive-action {
@@ -44,7 +44,7 @@ button {
 
   &.circular {
     border-radius: 100%;
-    padding: calc(config.$spacing-medium + 0.2em);
+    padding: calc(config.$spacing-medium + config.$border-size-small);
   }
 
   &.flat {

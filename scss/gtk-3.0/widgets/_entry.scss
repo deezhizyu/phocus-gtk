@@ -24,6 +24,7 @@ entry {
     &.left {
       margin-right: config.$spacing-medium;
     }
+
     &.right {
       margin-left: config.$spacing-medium;
     }
@@ -42,6 +43,7 @@ entry {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
     &:not(:last-child) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -53,6 +55,7 @@ entry {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
+
     &:not(:last-child) {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;

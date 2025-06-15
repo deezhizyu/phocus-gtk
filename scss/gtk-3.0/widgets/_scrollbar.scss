@@ -1,14 +1,20 @@
-@use '../colors';
+@use "../colors";
 
 scrollbar {
-  -GtkScrollbar-has-backward-stepper: false;
-  -GtkScrollbar-has-forward-stepper: false;
+  -gtkscrollbar-has-backward-stepper: false;
+  -gtkscrollbar-has-forward-stepper: false;
 
   slider {
-    padding: 0.2em;
+    padding: config.$border-size-small;
     border-radius: 1em;
     background: colors.$white-weakest;
-    &:hover { background: colors.$white-weak;}
-    &:active { background: colors.$accent-primary; }
+
+    &:hover {
+      background: colors.$white-weak;
+    }
+
+    &:active {
+      background: colors.$accent-primary;
+    }
   }
 }

@@ -1,4 +1,4 @@
-@use '../colors';
+@use "../colors";
 
 // TODO: theme "this tab is playing audio" tooltip section
 // TODO: find out how bookmark drag and drop boxes render their buggy 1px border
@@ -40,7 +40,8 @@ window.background.chromium {
   }
 
   // tab bar / headerbar
-  headerbar, menubar {
+  headerbar,
+  menubar {
     background: colors.$surface-strongest;
 
     label {
